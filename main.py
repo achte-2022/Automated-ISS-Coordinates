@@ -3,6 +3,7 @@ import requests
 import datetime as dt
 import time
 import smtplib
+import os
 
 # CONSTANTS
 ISS_API_ENDPOINT = "http://api.open-notify.org/iss-now.json"
@@ -14,11 +15,11 @@ MY_LATITUDE = -134.0852
 MY_LONGITUDE = 18.2345
 
 # DUMMY CREDENTIALS
-FROM_SMTP_SERVER = "smtp.mail.yahoo.com"
-FROM_MAIL = "random@yahoo.com"
-TO_MAIL = "random@gmail.com"
+TO_MAIL = os.environ.get("TO_MAIL")
+FROM_MAIL = os.environ.get("FROM_MAIL")
+PASSWORD = os.environ.get("PASSWORD")
+SMTP_SERVER = os.environ.get("SMTP_SERVER")
 SUBJECT = "Subject:Lookout for ISS.\n"
-PASSWORD = "password123"
 
 # GET ISS REQUEST
 iss_response = requests.get(ISS_API_ENDPOINT)
