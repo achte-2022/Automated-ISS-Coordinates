@@ -32,6 +32,18 @@ Python 3.9.12
 $ git clone git@github.com:achte-2022/ISS-Coordinates.git
 ```
 
+## Setting Up Environment Variables 
+
+### Environment Variables are DUMMY values
+
+```sh
+$ cd ISS-Coordinates
+$ export TO_MAIL=random@gmail.com
+$ export FROM_MAIL=random@yahoo.com;
+$ export PASSWORD=password123;
+$ export SMTP_SERVER=smtp.mail.yahoo.com;
+```
+
 ## Run
 
 ```sh
